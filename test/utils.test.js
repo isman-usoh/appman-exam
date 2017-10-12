@@ -1,6 +1,6 @@
 const { updateStudentScore, removeStudentScoreBySubject, transformData } = require('../utils');
 
-const store = [
+let store = [
     {
         subject: 'math',
         students: [{ name: 'luffy', score: 10 }, { name: 'zoro', score: 15 }]
@@ -12,6 +12,19 @@ const store = [
 ];
 
 describe('update new student score', () => {
+    beforeEach(() => {
+        store = [
+            {
+                subject: 'math',
+                students: [{ name: 'luffy', score: 10 }, { name: 'zoro', score: 15 }]
+            },
+            {
+                subject: 'science',
+                students: [{ name: 'luffy', score: 15 }, { name: 'zoro', score: 25 }]
+            }
+        ];
+    })
+
     test('should be update new student correctly', () => {
         const result = updateStudentScore(store, {
             name: 'sanji',
@@ -93,6 +106,18 @@ describe('update new student score', () => {
 });
 
 describe('remove score by student and subject', () => {
+    beforeEach(() => {
+        store = [
+            {
+                subject: 'math',
+                students: [{ name: 'luffy', score: 10 }, { name: 'zoro', score: 15 }]
+            },
+            {
+                subject: 'science',
+                students: [{ name: 'luffy', score: 15 }, { name: 'zoro', score: 25 }]
+            }
+        ];
+    })
     test('should be remove correct', () => {
         const result = removeStudentScoreBySubject(store, { name: 'luffy', subject: 'math' });
 
@@ -112,6 +137,19 @@ describe('remove score by student and subject', () => {
 });
 
 describe('transform data by student', () => {
+    beforeEach(() => {
+        store = [
+            {
+                subject: 'math',
+                students: [{ name: 'luffy', score: 10 }, { name: 'zoro', score: 15 }]
+            },
+            {
+                subject: 'science',
+                students: [{ name: 'luffy', score: 15 }, { name: 'zoro', score: 25 }]
+            }
+        ];
+    });
+
     test('should be transform correctly', () => {
         const result = transformData(store);
         const expected = [

@@ -10,11 +10,15 @@
     },
     "dependencies": {
         "body-parser": "1.17.2",
+        "classnames": "^2.2.5",
         "cors": "2.8.4",
         "express": "4.15.3",
         "lodash": "4.17.4",
         "react": "15.6.1",
-        "react-dom": "15.6.1"
+        "react-dom": "15.6.1",
+        "tapable": "^0.2.8",
+        "ts-loader": "^2.3.7",
+        "typescript": "^2.5.3"
     },
     "devDependencies": {
         "babel-core": "6.25.0",

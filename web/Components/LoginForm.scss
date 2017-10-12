@@ -1,0 +1,28 @@
+
+input {
+    border-radius: 1rem !important;
+    &:focus {
+        border-color: #242526!important;
+    }
+}
+button {
+    background-color: deepskyblue !important;
+    border-radius: 5px;
+}
+a {
+    text-decoration: underline;
+    color: deepskyblue;
+}
+
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.red {
+    color: red !important;
+}
